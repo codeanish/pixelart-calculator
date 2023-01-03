@@ -8,12 +8,12 @@ type Props = {
 
 const RenderButton = (buttonSize: number, value: string, onClick: () => void): JSX.Element => {
     if (buttonSize === 3) {
-        return <button className='w-96 h-32 bg-gray-300 rounded-full' onClick={() => onClick()}>{value}</button>
+        return <button className='col-span-3 rounded-full bg-gray-300 h-20' onClick={() => onClick()}>{value}</button>
     }
     if (buttonSize === 2) {
-        return <button className='w-64 h-32 bg-gray-300 rounded-full' onClick={() => onClick()}>{value}</button>
+        return <button className='col-span-2 rounded-full bg-gray-300 h-20' onClick={() => onClick()}>{value}</button>
     }
-    return <button className='w-32 h-32 bg-gray-300 rounded-full' onClick={() => onClick()}>{value}</button>
+    return <button className='col-span-1 rounded-full bg-gray-300 h-20' onClick={() => onClick()}>{value}</button>
 }
 
 const OperatorButton = (props: Props) => {
